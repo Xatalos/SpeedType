@@ -67,7 +67,16 @@ function getRandomText() {
                  "take it with a grain of salt",
                  "let the cat out of the bag",
                  "you often burn the midnight oil",
-                 "actions speak louder than words"];
+                 "drastic times call for drastic measures",
+                 "he just jumped on the bandwagon",
+                 "we will keep him at bay",
+                 "that was the last straw",
+                 "you are preaching to the choir",
+                 "he is like a squirrel",
+                 "rural regions require reduced risks",
+                 "he is either a sergeant or a colonel",
+                 "teach a man to fish and feed him for a lifetime",
+                 "that is no way for a leader to behave"];
     return texts[Math.floor(Math.random() * (texts.length))];
 }
 
