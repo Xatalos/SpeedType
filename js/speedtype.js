@@ -90,7 +90,6 @@ function backToMenu() {
     "use strict";
     $("#startMenu").removeClass("hidden");
     $("#highscores").addClass("hidden");
-    $("#credits").addClass("hidden");
     $("#game").addClass("hidden");
     $("#results").addClass("hidden");
     points = 0;
@@ -115,12 +114,6 @@ function showHighScores() {
     $("#startMenu").addClass("hidden");
     $("#game").addClass("hidden");
     $("#highscores").removeClass("hidden");
-}
-
-function showCredits() {
-    "use strict";
-    $("#startMenu").addClass("hidden");
-    $("#credits").removeClass("hidden");
 }
 
 function showResults() {
