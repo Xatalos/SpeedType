@@ -2,6 +2,7 @@ var remainingTime = 60;
 var interval;
 var points = 0;
 var targetText = "";
+var previousText = "";
 
 function initiate() {
     "use strict";
@@ -77,7 +78,12 @@ function getRandomText() {
                  "he is either a sergeant or a colonel",
                  "teach a man to fish and feed him for a lifetime",
                  "that is no way for a leader to behave"];
-    return texts[Math.floor(Math.random() * (texts.length))];
+    var text = texts[Math.floor(Math.random() * (texts.length))];
+    if (previousText == text) {
+        getRandomText();
+    }
+    previousText = text;
+    return text;
 }
 
 function backToMenu() {
