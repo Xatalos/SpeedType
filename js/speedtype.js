@@ -116,13 +116,13 @@ function showCredits() {
 function showResults() {
     "use strict";
     clearInterval(interval);
+    $("#points").text(points);
     $("#game").addClass("hidden");
     $("#results").removeClass("hidden");
 }
 
 function sendScore() {
     "use strict";
-    $("#points").text(points);
     var name = $("#name").val();
     if (name == "") {
         name = "anonymous";
