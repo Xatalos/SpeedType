@@ -80,7 +80,7 @@ function getRandomText() {
                  "that is no way for a leader to behave"];
     var text = texts[Math.floor(Math.random() * (texts.length))];
     if (previousText == text) {
-        getRandomText();
+        text = getRandomText();
     }
     previousText = text;
     return text;
