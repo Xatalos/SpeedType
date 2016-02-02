@@ -14,6 +14,8 @@ function startGame() {
     $("#targetText").text(targetText);
     $("#time").text(remainingTime);
     interval = setInterval(gameTimer, 1000);
+    $("#inputArea").text("");
+    $("#inputArea").append('<input id="inputText" type="text" name="text" placeholder="Your Answer" onkeyup="checkForCorrectAnswer()" autofocus>');
     $("#inputText").val("");
     $("#inputText").bind('paste', function (e) {
        e.preventDefault(); // disable pasting into the input field
