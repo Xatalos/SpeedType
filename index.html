@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/speedtype.css" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script src="js/speedtype.js"></script>
+        <title>SpeedType</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body onload="initiate()">
+        <div class="centered">
+            <div id="startMenu" class="align-center">
+                <h1>SpeedType</h1>
+                <div>
+                    <br>
+                    <p>SpeedType is a game where you have to rewrite the shown text as quickly as possible.</p>
+                    <p>Every successful round gives you 10 points.</p>
+                    <p>Be fast and claim your spot in the high scores!</p>
+                    <br>
+                </div>
+                <div>
+                    <a onClick="startGame()" class="btn btn-default">Start a Game</a>
+                    <a onClick="showHighScores()" class="btn btn-default">High Scores</a>
+                    <a onClick="showCredits()" class="btn btn-default">Credits</a>
+                </div>
+            </div>
+            <div id="game" class="hidden align-center">
+                <p>Remaining Time:</p>
+                <p id="time"></p>
+                <h1 id="targetText"></h1>
+                <br>
+                <input id="inputText" type="text" name="text" placeholder="Your Answer" onkeyup="checkForCorrectAnswer()">
+                <p></p><p><a onClick="backToMenu()" class="btn btn-default">Go Back</a></p>
+            </div>
+            <div id="highscores" class="hidden align-center">
+                <h1>High Scores</h1>
+                <p id="highscoreslist"></p>
+                <a onClick="backToMenu()" class="btn btn-default">Go Back</a>
+            </div>
+            <div id="credits" class="hidden align-center">
+                <h1>Development</h1>
+                <p>Teemu Salminen</p>
+                <h1>Music</h1>
+                <p>Gobusto - under license CC-BY-SA 3.0</p>
+                <p>(http://creativecommons.org/licenses/by-sa/3.0/)</p>
+                <a onClick="backToMenu()" class="btn btn-default">Go Back</a>
+            </div>
+            <div id="results" class="hidden align-center">
+                <h1>How did your result compare to others?</h1>
+                <p><input id="name" type="text" name="name" placeholder="Your Nickname"></p>
+                <p><a onClick="sendScore()" class="btn btn-default">Submit Score</a></p>
+            </div>
+        </div>
+    </body>
+</html>

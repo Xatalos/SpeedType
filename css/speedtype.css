@@ -1,0 +1,17 @@
+.hidden {
+    display: none;
+}
+
+.centered {
+    margin: auto;
+    margin-top: 5%;
+    width: 500px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+p {
+    font-size: 130%
+}
