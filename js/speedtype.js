@@ -3,18 +3,9 @@ var interval;
 var points = 0;
 var targetText = "";
 
-var music;
-
 function initiate() {
     "use strict";
     $.get("http://speedtypescores.herokuapp.com/scores", function(data, status){}); // ping the Heroku app to become active
-    preloadMusic();
-}
-
-function preloadMusic() {
-    "use strict";
-    $("#game").append('<audio id="Music" class="music" preload loop> <source src="music/alliance.mp3" type="audio/mpeg"></audio>');
-    music = $("#Music")[0];
 }
 
 function startGame() {
@@ -28,7 +19,6 @@ function startGame() {
        e.preventDefault(); // disable pasting into the input field
     });
     $("#startMenu").addClass("hidden");
-    music.play();
     $("#game").removeClass("hidden");
 }
 
@@ -86,8 +76,6 @@ function backToMenu() {
     $("#credits").addClass("hidden");
     $("#game").addClass("hidden");
     $("#results").addClass("hidden");
-    music.pause();
-    music.currentTime = 0;
     points = 0;
     clearInterval(interval);
     remainingTime = 60;
