@@ -35,7 +35,7 @@ function startGame() {
 function checkForCorrectAnswer() {
     "use strict";
     if ($("#inputText").val() == targetText) {
-        points += 10;
+        points += targetText.length;
         showNextText();
     }
 }
