@@ -98,7 +98,7 @@ function showHighScores() {
     $("#highscoreslist").text("");
     $.get("http://speedtypescores.herokuapp.com/scores", function(data, status){
         for (var i = 0; i < data.length; i++) {
-            $("#highscoreslist").append("<p>" + data[i].name + ": " + data[i].points + "</p>");        
+            $("#highscoreslist").append("<p>" + $.parseHTML(data[i].name) + ": " + data[i].points + "</p>");        
         }
     });
     $("#startMenu").addClass("hidden");
