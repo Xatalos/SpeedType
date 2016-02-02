@@ -13,7 +13,7 @@ function initiate() {
 
 function preloadMusic() {
     "use strict";
-    $("#game").append('<audio id="Music" class="music" preload loop> <source src="music/Alliance.mp3" type="audio/mpeg"></audio>');
+    $("#game").append('<audio id="Music" class="music" preload loop> <source src="music/alliance.mp3" type="audio/mpeg"></audio>');
     music = $("#Music")[0];
 }
 
