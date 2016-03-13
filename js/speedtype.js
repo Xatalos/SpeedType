@@ -99,7 +99,7 @@ function backToMenu() {
 
 function showHighScores() {
     "use strict";
-    $("#highscoreslist").text("");
+    var scores = "";
     $.get("http://speedtypescores.herokuapp.com/scores", function(data, status){
         for (var i = 0; i < data.length; i++) {
             var name = $($.parseHTML(data[i].name)).text()
@@ -108,8 +108,10 @@ function showHighScores() {
                 .replace(/>/g, "&gt;")
                 .replace(/"/g, "&quot;")
                 .replace(/'/g, "&#039;");;
-            $("#highscoreslist").append("<p>" + name + ": " + data[i].points + "</p>");        
+            scores.append("<p>" + name + ": " + data[i].points + "</p>");        
         }
+        $("#highscoreslist").text("");
+        $("#highscoreslist").append(scores);
     });
     $("#startMenu").addClass("hidden");
     $("#game").addClass("hidden");
