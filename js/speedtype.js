@@ -108,7 +108,7 @@ function showHighScores() {
                 .replace(/>/g, "&gt;")
                 .replace(/"/g, "&quot;")
                 .replace(/'/g, "&#039;");;
-            scores.append("<p>" + name + ": " + data[i].points + "</p>");        
+            scores += ("<p>" + name + ": " + data[i].points + "</p>");        
         }
         $("#highscoreslist").text("");
         $("#highscoreslist").append(scores);
